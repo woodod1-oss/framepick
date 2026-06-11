@@ -1,0 +1,2806 @@
+{
+  "data": [
+    {
+      "video": {
+        "video_id": "lOAAqx9Km7I",
+        "title": "PLAYERUNKNOWNS BATTLEGROUNDS - DEV BLOG - CHARACTERS",
+        "ctr": 24.5,
+        "thumbnail_url": "https://img.youtube.com/vi/lOAAqx9Km7I/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/lOAAqx9Km7I/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "y0DhWQM40XQ",
+        "title": "Closed Beta Gameplay Trailer",
+        "ctr": 14.99,
+        "thumbnail_url": "https://img.youtube.com/vi/y0DhWQM40XQ/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.1,
+          "text_area_ratio": 0.01
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/y0DhWQM40XQ/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "fDLAFIhfFy4",
+        "title": "PLAYERUNKNOWNS BATTLEGROUNDS - Steam Early Access Launch Trailer",
+        "ctr": 14.73,
+        "thumbnail_url": "https://img.youtube.com/vi/fDLAFIhfFy4/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0
+        },
+        "color_features": {
+          "brightness": 0.45,
+          "saturation": 0.45,
+          "contrast": 0.55
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/fDLAFIhfFy4/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "NyyfdUmMx9Y",
+        "title": "PUBG - Console - Cross Platform Play",
+        "ctr": 14.58,
+        "thumbnail_url": "https://img.youtube.com/vi/NyyfdUmMx9Y/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": null,
+          "text_area_ratio": 0.25
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/NyyfdUmMx9Y/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "-Dbne2TgCWg",
+        "title": "PLAYERUNKNOWNS BATTLEGROUNDS - ALPHA GAMEPLAY FOOTAGE",
+        "ctr": 13.7,
+        "thumbnail_url": "https://img.youtube.com/vi/-Dbne2TgCWg/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0.02
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/-Dbne2TgCWg/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "j1TVccneedw",
+        "title": "Ranked Mode : How to Play | PUBG",
+        "ctr": 13.2,
+        "thumbnail_url": "https://img.youtube.com/vi/j1TVccneedw/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/j1TVccneedw/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "KobClIOPAJk",
+        "title": "PUBG: BATTLEGROUNDS PARA TODOS - BAIXE AGORA E JOGUE DE GRAÇA",
+        "ctr": 12.5,
+        "thumbnail_url": "https://img.youtube.com/vi/KobClIOPAJk/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.3,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/KobClIOPAJk/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "nIcGW26z3HU",
+        "title": "PUBG - Quick Marker System",
+        "ctr": 12.17,
+        "thumbnail_url": "https://img.youtube.com/vi/nIcGW26z3HU/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/nIcGW26z3HU/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "9sJqOz83qFk",
+        "title": "PUBG | Erangel Classic Returns",
+        "ctr": 11.75,
+        "thumbnail_url": "https://img.youtube.com/vi/9sJqOz83qFk/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.25,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.6
+        },
+        "engagement": {
+          "attention_score": 9,
+          "emotional_intensity": 8
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/9sJqOz83qFk/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "FcdeTsGMFS0",
+        "title": "Fantasy Battle Royale : How To Play | PUBG",
+        "ctr": 11.59,
+        "thumbnail_url": "https://img.youtube.com/vi/FcdeTsGMFS0/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/FcdeTsGMFS0/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "nLaHSGJej6Q",
+        "title": "NEW MAP TEASER | PUBG",
+        "ctr": 11.36,
+        "thumbnail_url": "https://img.youtube.com/vi/nLaHSGJej6Q/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/nLaHSGJej6Q/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "bwhfiszWwjE",
+        "title": "PUBG - Erangel Visual Update",
+        "ctr": 11.3,
+        "thumbnail_url": "https://img.youtube.com/vi/bwhfiszWwjE/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/bwhfiszWwjE/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "mIkJ7gyqKaA",
+        "title": "PUBG - New Lobby Music Preview",
+        "ctr": 10.99,
+        "thumbnail_url": "https://img.youtube.com/vi/mIkJ7gyqKaA/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/mIkJ7gyqKaA/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "It8A_bEQWNo",
+        "title": "PUBG - Rank System [Teaser]",
+        "ctr": 10.92,
+        "thumbnail_url": "https://img.youtube.com/vi/It8A_bEQWNo/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0
+        },
+        "color_features": {
+          "brightness": 0.8,
+          "saturation": 0.8,
+          "contrast": 0.7
+        },
+        "engagement": {
+          "attention_score": 9,
+          "emotional_intensity": 8
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/It8A_bEQWNo/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "JVBTAM7B57Q",
+        "title": "PUBG Xbox 2018 E3 Trailer",
+        "ctr": 10.76,
+        "thumbnail_url": "https://img.youtube.com/vi/JVBTAM7B57Q/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/JVBTAM7B57Q/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "fuBajsiGVXE",
+        "title": "PUBG: Season 6 Gameplay Trailer",
+        "ctr": 10.74,
+        "thumbnail_url": "https://img.youtube.com/vi/fuBajsiGVXE/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.2,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/fuBajsiGVXE/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "Qvd2YbP8j64",
+        "title": "Welcome to Sanhok",
+        "ctr": 10.7,
+        "thumbnail_url": "https://img.youtube.com/vi/Qvd2YbP8j64/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.8,
+          "saturation": 0.7,
+          "contrast": 0.6
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/Qvd2YbP8j64/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "tzzg6Z5oKGY",
+        "title": "PUBG - Season 5 Gameplay Trailer",
+        "ctr": 10.32,
+        "thumbnail_url": "https://img.youtube.com/vi/tzzg6Z5oKGY/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/tzzg6Z5oKGY/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "57YjoVkN70Q",
+        "title": "Making of Emotes 2 | PUBG",
+        "ctr": 10.31,
+        "thumbnail_url": "https://img.youtube.com/vi/57YjoVkN70Q/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/57YjoVkN70Q/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "Bytx9GCxQfE",
+        "title": "BATTLEGROUNDS x BLACKPINK Collaboration Trailer l PUBG",
+        "ctr": 10.13,
+        "thumbnail_url": "https://img.youtube.com/vi/Bytx9GCxQfE/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/Bytx9GCxQfE/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "fLK3hwsp2wg",
+        "title": "Breakdown - What is PUBG?",
+        "ctr": 9.96,
+        "thumbnail_url": "https://img.youtube.com/vi/fLK3hwsp2wg/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0.15
+        },
+        "color_features": {
+          "brightness": 0.55,
+          "saturation": 0.2,
+          "contrast": 0.7
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 3
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/fLK3hwsp2wg/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "kYSwxSavFjo",
+        "title": "BATTLEGROUNDS x BLACKPINK Squad-up LIVE | PUBG",
+        "ctr": 9.92,
+        "thumbnail_url": "https://img.youtube.com/vi/kYSwxSavFjo/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/kYSwxSavFjo/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "y577TmZo584",
+        "title": "5th Anniversary Music Playlist - VIKENDI Theme Winter Has Arrived | PUBG",
+        "ctr": 9.79,
+        "thumbnail_url": "https://img.youtube.com/vi/y577TmZo584/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/y577TmZo584/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "uRU54LwJcfM",
+        "title": "5th Anniversary Music Playlist - MIRAMAR Theme WRITE YOUR STORY (Badlands) | PUBG",
+        "ctr": 9.71,
+        "thumbnail_url": "https://img.youtube.com/vi/uRU54LwJcfM/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/uRU54LwJcfM/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "VGCjdrMPE9E",
+        "title": "PUBG - One Year Anniversary “Thank You” Video",
+        "ctr": 9.7,
+        "thumbnail_url": "https://img.youtube.com/vi/VGCjdrMPE9E/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/VGCjdrMPE9E/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "nE5WO5rinus",
+        "title": "PUBG | Erangel Classic - Gameplay Trailer",
+        "ctr": 9.57,
+        "thumbnail_url": "https://img.youtube.com/vi/nE5WO5rinus/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/nE5WO5rinus/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "u1oqfdh4xBY",
+        "title": "PUBG: BATTLEGROUNDS Cinematic trailer | PUBG",
+        "ctr": 9.54,
+        "thumbnail_url": "https://img.youtube.com/vi/u1oqfdh4xBY/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.25
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.6
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/u1oqfdh4xBY/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "sQAR8_CXDfc",
+        "title": "5th Anniversary Music Playlist - Official Launch Welcome To My Battlegrounds (Original) | PUBG",
+        "ctr": 9.53,
+        "thumbnail_url": "https://img.youtube.com/vi/sQAR8_CXDfc/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/sQAR8_CXDfc/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "_01jUAAq93Y",
+        "title": "PUBG - Season 4 Behind The Scenes",
+        "ctr": 9.43,
+        "thumbnail_url": "https://img.youtube.com/vi/_01jUAAq93Y/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/_01jUAAq93Y/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "Unp5CI-yliE",
+        "title": "PUBG - The Making of Sanhok",
+        "ctr": 9.43,
+        "thumbnail_url": "https://img.youtube.com/vi/Unp5CI-yliE/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/Unp5CI-yliE/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "pVnZaetxGeU",
+        "title": "PUBG Workshop - How To Craft | PUBG",
+        "ctr": 9.37,
+        "thumbnail_url": "https://img.youtube.com/vi/pVnZaetxGeU/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.6,
+          "saturation": 0.6,
+          "contrast": 0.6
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 6
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/pVnZaetxGeU/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "nrxC08sHfkQ",
+        "title": "5th Anniversary Music Playlist - 2017 Early Access Ready To Battle | PUBG",
+        "ctr": 9.36,
+        "thumbnail_url": "https://img.youtube.com/vi/nrxC08sHfkQ/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/nrxC08sHfkQ/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "20blBCvb_Gc",
+        "title": "New Feature - MG3 | PUBG",
+        "ctr": 9.35,
+        "thumbnail_url": "https://img.youtube.com/vi/20blBCvb_Gc/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.2,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.6
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/20blBCvb_Gc/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "nJVlgD5TSHw",
+        "title": "TAEGO Cinematic Trailer | PUBG",
+        "ctr": 9.27,
+        "thumbnail_url": "https://img.youtube.com/vi/nJVlgD5TSHw/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/nJVlgD5TSHw/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "pG82ANXmed8",
+        "title": "PUBG | All About Erangel Classic",
+        "ctr": 9.24,
+        "thumbnail_url": "https://img.youtube.com/vi/pG82ANXmed8/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.05,
+          "text_area_ratio": 0.08
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/pG82ANXmed8/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "cvApAW-weEE",
+        "title": "PUBG | Patch Report #29.2 - Erangel Classic Returns, New Rondo Zipline Gun, Win Streak Showdown",
+        "ctr": 9.21,
+        "thumbnail_url": "https://img.youtube.com/vi/cvApAW-weEE/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/cvApAW-weEE/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "PepSkiLQyBY",
+        "title": "PUBG Squad Tactics Episode 3 - Man Down",
+        "ctr": 9.17,
+        "thumbnail_url": "https://img.youtube.com/vi/PepSkiLQyBY/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.05,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/PepSkiLQyBY/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "pGLWO_fVfmM",
+        "title": "เกม PUBG: BATTLEGROUNDS เปิดฟรี เล่นได้ทุกคน (TH1)",
+        "ctr": 9.09,
+        "thumbnail_url": "https://img.youtube.com/vi/pGLWO_fVfmM/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.3,
+          "text_area_ratio": 0
+        },
+        "color_features": {
+          "brightness": 0.65,
+          "saturation": 0.55,
+          "contrast": 0.7
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/pGLWO_fVfmM/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "mGR8ECSd-z0",
+        "title": "PUBG Mechanics - Close Quarters",
+        "ctr": 8.92,
+        "thumbnail_url": "https://img.youtube.com/vi/mGR8ECSd-z0/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/mGR8ECSd-z0/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "LwFBz2_qQfk",
+        "title": "PUBG - Season 4 - Erangel Orchestra",
+        "ctr": 8.91,
+        "thumbnail_url": "https://img.youtube.com/vi/LwFBz2_qQfk/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/LwFBz2_qQfk/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "TlZynHtfTj0",
+        "title": "New feature - Mortar | PUBG",
+        "ctr": 8.8,
+        "thumbnail_url": "https://img.youtube.com/vi/TlZynHtfTj0/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/TlZynHtfTj0/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "qFrl20Eg0qM",
+        "title": "Making of Emotes 1 | PUBG",
+        "ctr": 8.8,
+        "thumbnail_url": "https://img.youtube.com/vi/qFrl20Eg0qM/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.1,
+          "text_area_ratio": 0.01
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/qFrl20Eg0qM/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "ZNfjftrDBEU",
+        "title": "PUBG | The Classics Highlights - We Are Going Home",
+        "ctr": 8.79,
+        "thumbnail_url": "https://img.youtube.com/vi/ZNfjftrDBEU/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0.06
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/ZNfjftrDBEU/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "6FAldb21s2E",
+        "title": "Season 8 Gameplay Trailer | PUBG",
+        "ctr": 8.54,
+        "thumbnail_url": "https://img.youtube.com/vi/6FAldb21s2E/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/6FAldb21s2E/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "pqaHWui8NNo",
+        "title": "PUBG - Season 4 - Erangel Tour Guide Episode 1",
+        "ctr": 8.54,
+        "thumbnail_url": "https://img.youtube.com/vi/pqaHWui8NNo/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 3
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/pqaHWui8NNo/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "SjfSR2NNSD8",
+        "title": "PUBG | Patch Report #30.2 - PUBG x Automobili Lamborghini Collab, FBR Mode Comeback, and MORE",
+        "ctr": 8.52,
+        "thumbnail_url": "https://img.youtube.com/vi/SjfSR2NNSD8/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.05,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/SjfSR2NNSD8/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "CDsBRxaBpNA",
+        "title": "PUBG | Patch Report #29.1 - New Rondo Feature Destructible Terrain, Ducati Collaboration and MORE",
+        "ctr": 8.49,
+        "thumbnail_url": "https://img.youtube.com/vi/CDsBRxaBpNA/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.05,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/CDsBRxaBpNA/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "hU8oGKzVAmQ",
+        "title": "Season 7 Gameplay Trailer | PUBG",
+        "ctr": 8.44,
+        "thumbnail_url": "https://img.youtube.com/vi/hU8oGKzVAmQ/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.2,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/hU8oGKzVAmQ/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "jHg6TVbDl7U",
+        "title": "PUBG | Patch Report #30.1 - PUBG x NewJeans Collab, SMG Rebalance, Ranked Updates",
+        "ctr": 8.43,
+        "thumbnail_url": "https://img.youtube.com/vi/jHg6TVbDl7U/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.2,
+          "text_area_ratio": 0.4
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/jHg6TVbDl7U/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "DvE-OtK7-dc",
+        "title": "PUBG Collaboration - Play with Nier Squad | PUBG",
+        "ctr": 8.41,
+        "thumbnail_url": "https://img.youtube.com/vi/DvE-OtK7-dc/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.25,
+          "text_area_ratio": 0.22
+        },
+        "color_features": {
+          "brightness": 0.65,
+          "saturation": 0.6,
+          "contrast": 0.55
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/DvE-OtK7-dc/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "7DUdAnO09U8",
+        "title": "PLAYERUNKNOWN’S BATTLEGROUNDS - Xbox One Trailer",
+        "ctr": 8.4,
+        "thumbnail_url": "https://img.youtube.com/vi/7DUdAnO09U8/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/7DUdAnO09U8/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "_LTiEXMc5J0",
+        "title": "PUBG - Season 4 Gameplay Trailer",
+        "ctr": 8.38,
+        "thumbnail_url": "https://img.youtube.com/vi/_LTiEXMc5J0/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.25,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.45,
+          "saturation": 0.5,
+          "contrast": 0.6
+        },
+        "engagement": {
+          "attention_score": 7,
+          "emotional_intensity": 6
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/_LTiEXMc5J0/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "hfjazBN0DwA",
+        "title": "PUBG - Vikendi Snow Map Gameplay Trailer",
+        "ctr": 8.3,
+        "thumbnail_url": "https://img.youtube.com/vi/hfjazBN0DwA/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.4,
+          "contrast": 0.6
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/hfjazBN0DwA/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "FOmmbaP_tn0",
+        "title": "Brand Film - Born Survivor | PUBG",
+        "ctr": 8.21,
+        "thumbnail_url": "https://img.youtube.com/vi/FOmmbaP_tn0/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.05,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/FOmmbaP_tn0/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "trALS6TUBOI",
+        "title": "Making of Emotes 3 | PUBG",
+        "ctr": 8.14,
+        "thumbnail_url": "https://img.youtube.com/vi/trALS6TUBOI/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/trALS6TUBOI/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "jhsK_7lYA6s",
+        "title": "PUBG - New Feature - Survival Mastery",
+        "ctr": 8.12,
+        "thumbnail_url": "https://img.youtube.com/vi/jhsK_7lYA6s/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.01,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/jhsK_7lYA6s/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "GZHzcn1l3n8",
+        "title": "DESTON Cinematic Trailer | PUBG",
+        "ctr": 8.12,
+        "thumbnail_url": "https://img.youtube.com/vi/GZHzcn1l3n8/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/GZHzcn1l3n8/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "YLwCfTA6LCQ",
+        "title": "Season 10 Haven Launch Trailer | PUBG",
+        "ctr": 8.11,
+        "thumbnail_url": "https://img.youtube.com/vi/YLwCfTA6LCQ/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0.22
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.6
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/YLwCfTA6LCQ/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "Pv36ldHkunA",
+        "title": "New Feature: Dynamic Weather",
+        "ctr": 8.04,
+        "thumbnail_url": "https://img.youtube.com/vi/Pv36ldHkunA/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0.25
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.6
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/Pv36ldHkunA/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "aHIv35aHVF8",
+        "title": "PUBG Dev Blog : Vehicle Sound Recording",
+        "ctr": 8.01,
+        "thumbnail_url": "https://img.youtube.com/vi/aHIv35aHVF8/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.3,
+          "saturation": 0.6,
+          "contrast": 0.8
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/aHIv35aHVF8/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "JxBGDORe2yE",
+        "title": "PUBG - New Weapon - DBS",
+        "ctr": 8.01,
+        "thumbnail_url": "https://img.youtube.com/vi/JxBGDORe2yE/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.2,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/JxBGDORe2yE/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "u6JBu2RQmgY",
+        "title": "PUBG - New Feature - Flare Gun",
+        "ctr": 8,
+        "thumbnail_url": "https://img.youtube.com/vi/u6JBu2RQmgY/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/u6JBu2RQmgY/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "huwYjpXfyA0",
+        "title": "Erangel Classic Movie: The PUBG Paradox | PUBG",
+        "ctr": 7.99,
+        "thumbnail_url": "https://img.youtube.com/vi/huwYjpXfyA0/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/huwYjpXfyA0/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "ZLwkfypsoFE",
+        "title": "PUBG Squad Tactics Episode 2- Choke Point Ambush",
+        "ctr": 7.96,
+        "thumbnail_url": "https://img.youtube.com/vi/ZLwkfypsoFE/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.03,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/ZLwkfypsoFE/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "URBy9t6e8rY",
+        "title": "PUBG - Stand United: PGC 2019 Trailer",
+        "ctr": 7.94,
+        "thumbnail_url": "https://img.youtube.com/vi/URBy9t6e8rY/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.3,
+          "saturation": 0.4,
+          "contrast": 0.6
+        },
+        "engagement": {
+          "attention_score": 7,
+          "emotional_intensity": 6
+        },
+        "content": {
+          "category": "gaming_esports"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/URBy9t6e8rY/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "tJH9HpApTK4",
+        "title": "PUBG | Ride The Sandstorm - Miramar Update",
+        "ctr": 7.93,
+        "thumbnail_url": "https://img.youtube.com/vi/tJH9HpApTK4/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.05,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/tJH9HpApTK4/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "LhH2hCCjb4U",
+        "title": "DESTON Gameplay Trailer | PUBG",
+        "ctr": 7.89,
+        "thumbnail_url": "https://img.youtube.com/vi/LhH2hCCjb4U/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/LhH2hCCjb4U/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "Bbg9vG-6vD8",
+        "title": "PUBG | Erangel Update Teaser",
+        "ctr": 7.86,
+        "thumbnail_url": "https://img.youtube.com/vi/Bbg9vG-6vD8/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.05,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/Bbg9vG-6vD8/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "VJQpNhxT2yo",
+        "title": "PUBG - VIkendi - Slovenian Quartet Rendition",
+        "ctr": 7.83,
+        "thumbnail_url": "https://img.youtube.com/vi/VJQpNhxT2yo/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/VJQpNhxT2yo/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "Qxbbm-dIuBQ",
+        "title": "PUBG Squad Tactics - Squad Roles",
+        "ctr": 7.72,
+        "thumbnail_url": "https://img.youtube.com/vi/Qxbbm-dIuBQ/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.05,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/Qxbbm-dIuBQ/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "AfCDR1dfBnM",
+        "title": "PUBG - New Weapon - Mk47 Mutant",
+        "ctr": 7.71,
+        "thumbnail_url": "https://img.youtube.com/vi/AfCDR1dfBnM/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/AfCDR1dfBnM/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "SS_i7_9Mzus",
+        "title": "PUBG Mechanics - Karakin | PUBG",
+        "ctr": 7.61,
+        "thumbnail_url": "https://img.youtube.com/vi/SS_i7_9Mzus/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/SS_i7_9Mzus/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "-uPNQnyHlnA",
+        "title": "The Sanhok TapesㅣPUBG UNIVERSE",
+        "ctr": 7.59,
+        "thumbnail_url": "https://img.youtube.com/vi/-uPNQnyHlnA/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/-uPNQnyHlnA/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "iBwAOM7eXrs",
+        "title": "PUBG | Epic Games Store Launch Trailer",
+        "ctr": 7.56,
+        "thumbnail_url": "https://img.youtube.com/vi/iBwAOM7eXrs/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.2,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/iBwAOM7eXrs/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "x0uSNxdQ7RA",
+        "title": "Cinematic Trailer - A Lucky Day | PUBG",
+        "ctr": 7.54,
+        "thumbnail_url": "https://img.youtube.com/vi/x0uSNxdQ7RA/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.25
+        },
+        "color_features": {
+          "brightness": 0.65,
+          "saturation": 0.6,
+          "contrast": 0.7
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/x0uSNxdQ7RA/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "iw_R3Lq7O7c",
+        "title": "PUBG | Neymar Jr is Back",
+        "ctr": 7.48,
+        "thumbnail_url": "https://img.youtube.com/vi/iw_R3Lq7O7c/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.2,
+          "text_area_ratio": 0.25
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.65,
+          "contrast": 0.6
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/iw_R3Lq7O7c/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "5W-MoOf6Yeo",
+        "title": "Season 9 Paramo Launch Trailer | PUBG",
+        "ctr": 7.48,
+        "thumbnail_url": "https://img.youtube.com/vi/5W-MoOf6Yeo/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.7
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/5W-MoOf6Yeo/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "u-LL6JvkWeY",
+        "title": "PUBG | RONDO - Gameplay Trailer",
+        "ctr": 7.46,
+        "thumbnail_url": "https://img.youtube.com/vi/u-LL6JvkWeY/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/u-LL6JvkWeY/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "MZQH6Sh8HC0",
+        "title": "PUBG | Patch Report #28.1 - New Feature Co-op Climb, RONDO New Electric Vehicle, Spring Fest 2024",
+        "ctr": 7.44,
+        "thumbnail_url": "https://img.youtube.com/vi/MZQH6Sh8HC0/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/MZQH6Sh8HC0/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "V3-WstGfODU",
+        "title": "PUBG - Season 4 - Erangel Tour Guide Episode 2",
+        "ctr": 7.36,
+        "thumbnail_url": "https://img.youtube.com/vi/V3-WstGfODU/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0.25
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/V3-WstGfODU/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "5-I9a3lqwJg",
+        "title": "PUBG - New Feature - BRDM-2",
+        "ctr": 7.29,
+        "thumbnail_url": "https://img.youtube.com/vi/5-I9a3lqwJg/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.6
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/5-I9a3lqwJg/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "HNnpiJn_zOg",
+        "title": "PUBG - New Weapon - Beryl M762",
+        "ctr": 7.26,
+        "thumbnail_url": "https://img.youtube.com/vi/HNnpiJn_zOg/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/HNnpiJn_zOg/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "_omG6Qk4uZY",
+        "title": "PUBG | New Feature - Co-op Climb & Vehicle Vaulting",
+        "ctr": 7.22,
+        "thumbnail_url": "https://img.youtube.com/vi/_omG6Qk4uZY/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.25
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.65,
+          "contrast": 0.6
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 6
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/_omG6Qk4uZY/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "EY8kGdjM0nc",
+        "title": "PUBG | Patch Report #27.2 - New Feature Market, In-game Challenges System, and more updates on RONDO",
+        "ctr": 7.12,
+        "thumbnail_url": "https://img.youtube.com/vi/EY8kGdjM0nc/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.01,
+          "text_area_ratio": 0.35
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/EY8kGdjM0nc/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "0peuTb6sFc0",
+        "title": "PUBG | CMs Letter - Clan System",
+        "ctr": 7.07,
+        "thumbnail_url": "https://img.youtube.com/vi/0peuTb6sFc0/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.08,
+          "text_area_ratio": 0.22
+        },
+        "color_features": {
+          "brightness": 0.75,
+          "saturation": 0.7,
+          "contrast": 0.6
+        },
+        "engagement": {
+          "attention_score": 9,
+          "emotional_intensity": 8
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/0peuTb6sFc0/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "tpdwF8Lv60o",
+        "title": "PUBG | Patch Report #28.2 - PUBG 7th Anniversary Celebrations, SMGs Balancing, Recall System Update",
+        "ctr": 7.05,
+        "thumbnail_url": "https://img.youtube.com/vi/tpdwF8Lv60o/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/tpdwF8Lv60o/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "vtpgEvrGmCg",
+        "title": "VIKENDI IS BACK! Open Development with PUBG Partners | PUBG",
+        "ctr": 7.04,
+        "thumbnail_url": "https://img.youtube.com/vi/vtpgEvrGmCg/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/vtpgEvrGmCg/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "S86vZ_bI8tU",
+        "title": "PUBG - Vikendi: New Feature - Moonlight",
+        "ctr": 7.04,
+        "thumbnail_url": "https://img.youtube.com/vi/S86vZ_bI8tU/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.6,
+          "saturation": 0.6,
+          "contrast": 0.7
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/S86vZ_bI8tU/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "8VdreRVGBeE",
+        "title": "PUBG - Behind the Scenes - The Making of Vikendi",
+        "ctr": 7.04,
+        "thumbnail_url": "https://img.youtube.com/vi/8VdreRVGBeE/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/8VdreRVGBeE/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "ordckLlrd2g",
+        "title": "PUBG | Music Playlist - VIKENDI REBORN Theme Winter Like No Other",
+        "ctr": 6.95,
+        "thumbnail_url": "https://img.youtube.com/vi/ordckLlrd2g/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.08,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/ordckLlrd2g/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "5SKS7dvrPnk",
+        "title": "PUBG | RONDO - OFFICIAL TEASER",
+        "ctr": 6.94,
+        "thumbnail_url": "https://img.youtube.com/vi/5SKS7dvrPnk/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.5,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/5SKS7dvrPnk/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "0xLyumsKWNY",
+        "title": "PLAYERUNKNOWNS BATTLEGROUNDS - Steam Early Access Launch AD #1",
+        "ctr": 6.93,
+        "thumbnail_url": "https://img.youtube.com/vi/0xLyumsKWNY/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.35,
+          "text_area_ratio": 0.05
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/0xLyumsKWNY/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "-vOylqYudCw",
+        "title": "PUBG Collaboration - Assassins have arrived | PUBG",
+        "ctr": 6.87,
+        "thumbnail_url": "https://img.youtube.com/vi/-vOylqYudCw/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.3,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/-vOylqYudCw/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "iqATnXiPBA4",
+        "title": "PUBG - New Feature - Ledge Grab",
+        "ctr": 6.86,
+        "thumbnail_url": "https://img.youtube.com/vi/iqATnXiPBA4/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/iqATnXiPBA4/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "h0s5X6pyhd0",
+        "title": "PUBG | Gameplay Trailer - Vikendi Reborn",
+        "ctr": 6.86,
+        "thumbnail_url": "https://img.youtube.com/vi/h0s5X6pyhd0/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.05,
+          "text_area_ratio": 0.25
+        },
+        "color_features": {
+          "brightness": 0.65,
+          "saturation": 0.5,
+          "contrast": 0.6
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 6
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/h0s5X6pyhd0/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "hh1mdQE34bA",
+        "title": "PUBG - Season 4 - Erangel Tour Guide Episode 3",
+        "ctr": 6.86,
+        "thumbnail_url": "https://img.youtube.com/vi/hh1mdQE34bA/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.6,
+          "saturation": 0.5,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/hh1mdQE34bA/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "Hfo-c9x5GQo",
+        "title": "PUBG - Survival Instincts - Hot Drops",
+        "ctr": 6.86,
+        "thumbnail_url": "https://img.youtube.com/vi/Hfo-c9x5GQo/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.15,
+          "text_area_ratio": 0.15
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/Hfo-c9x5GQo/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "vXhmna2AS9g",
+        "title": "PUBG Mechanics - Driving",
+        "ctr": 6.81,
+        "thumbnail_url": "https://img.youtube.com/vi/vXhmna2AS9g/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": true,
+          "face_size_ratio": 0.05,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/vXhmna2AS9g/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "6TOSV3-7hzU",
+        "title": "PLAYERUNKNOWNS BATTLEGROUNDS - The Game Awards 2017 Gameplay Trailer",
+        "ctr": 6.75,
+        "thumbnail_url": "https://img.youtube.com/vi/6TOSV3-7hzU/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/6TOSV3-7hzU/maxresdefault.jpg"
+    },
+    {
+      "video": {
+        "video_id": "a_iGIyqP8NA",
+        "title": "Making of Paramo | PUBG",
+        "ctr": 6.73,
+        "thumbnail_url": "https://img.youtube.com/vi/a_iGIyqP8NA/maxresdefault.jpg"
+      },
+      "features": {
+        "visual_features": {
+          "face_detected": false,
+          "face_size_ratio": 0,
+          "text_area_ratio": 0.2
+        },
+        "color_features": {
+          "brightness": 0.7,
+          "saturation": 0.6,
+          "contrast": 0.5
+        },
+        "engagement": {
+          "attention_score": 8,
+          "emotional_intensity": 7
+        },
+        "content": {
+          "category": "gaming"
+        }
+      },
+      "thumbnail_url": "https://img.youtube.com/vi/a_iGIyqP8NA/maxresdefault.jpg"
+    }
+  ],
+  "timestamp": "2026-02-28T01:21:46.138Z",
+  "last_index": 100
+}

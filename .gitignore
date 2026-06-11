@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+.backup_postmerge_*/
+.backup_premerge_*/
+_archive/
+dist/
+out/

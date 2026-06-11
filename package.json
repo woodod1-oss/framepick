@@ -1,0 +1,51 @@
+{
+  "name": "thumbnail-workbench",
+  "version": "1.1.0",
+  "private": true,
+  "description": "PUBG 그래픽팀 워크벤치 — AI 기반 영상 썸네일 추출 및 디자인 자동화 도구 (Electron + Gemini)",
+  "keywords": [
+    "electron",
+    "gemini",
+    "thumbnail",
+    "pubg",
+    "krafton",
+    "video-analysis",
+    "ffmpeg"
+  ],
+  "author": "KRAFTON Graphic Team",
+  "license": "UNLICENSED",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --mac"
+  },
+  "dependencies": {
+    "electron-store": "^8.1.0",
+    "fluent-ffmpeg": "^2.1.3",
+    "ffmpeg-static": "^5.2.0",
+    "@ffprobe-installer/ffprobe": "^1.4.1"
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^24.0.0"
+  },
+  "build": {
+    "appId": "com.yourname.thumbnail-workbench",
+    "productName": "썸네일 워크벤치",
+    "mac": {
+      "category": "public.app-category.productivity"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/**/*",
+      "template/**/*",
+      "rules/**/*",
+      "node_modules/**/*"
+    ],
+    "asarUnpack": [
+      "node_modules/ffmpeg-static/**",
+      "node_modules/@ffprobe-installer/**"
+    ]
+  }
+}
