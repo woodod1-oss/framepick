@@ -276,8 +276,84 @@
 
     const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 
+    // ─── 데모(모의) 모드 ─────────────────────────────────────────────────────
+    // API 키 자리에 'MOCK'을 입력하면 Gemini 호출을 모두 건너뛰고 합성 데이터를 반환한다.
+    // 실제 키에는 전혀 영향을 주지 않으며(센티넬 값에서만 동작), 키 없이 전체 파이프라인
+    // (추출 → 프리필터 → AI 점수 → 중복제거 → 편집기 → 룰 생성)을 오프라인으로 테스트할 수 있다.
+    const MOCK_KEY = 'MOCK';
+    const isMockKey = (k) => typeof k === 'string' && k.trim().toUpperCase() === MOCK_KEY;
+
+    // 문자열 → [0,1) 안정적 의사난수 (FNV-1a). 같은 프레임은 항상 같은 값,
+    // 다른 프레임은 서로 다른 값 → 점수가 적절히 흩어져 중복제거/랭킹이 현실적으로 동작.
+    const seededUnit = (str) => {
+      let h = 2166136261;
+      for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 16777619); }
+      return ((h >>> 0) % 100000) / 100000;
+    };
+
+    // 합성 피처 객체 — GEMINI_ANALYSIS_PROMPT_BASE 스키마를 그대로 따른다.
+    // scoreFrameBase / scoreContentType / getReasons / 룰 생성(validData)이 읽는 모든 필드를
+    // 채워서 다운스트림 코드가 undefined를 만나지 않도록 한다.
+    const mockFeatures = (seedStr, opts = {}) => {
+      const u = (salt) => seededUnit(seedStr + '|' + salt);
+      const pick = (val, arr) => arr[Math.min(arr.length - 1, Math.floor(val * arr.length))];
+      const r2 = (n) => parseFloat(n.toFixed(2));
+      const realPerson = u('rp') > 0.6;
+      return {
+        visual_features: {
+          action_intensity: pick(u('act'), ['low', 'medium', 'high', 'high']),
+          character_size: pick(u('csize'), ['none', 'small', 'medium', 'large', 'large']),
+          character_prominence: r2(u('cp')),
+          character_pose: pick(u('pose'), ['dynamic', 'dynamic', 'idle', 'none']),
+          character_visibility: pick(u('cvis'), ['clear', 'clear', 'obscured', 'none']),
+          character_types: realPerson ? ['real_person'] : ['game_character'],
+          human_presence: realPerson ? (u('celeb') > 0.5 ? ['celebrity'] : ['person']) : [],
+          face_detected: realPerson ? u('face') > 0.3 : u('face') > 0.85,
+          face_size_ratio: r2(u('fsr') * 0.4),
+          ui_clutter_level: pick(u('ui'), ['none', 'none', 'low', 'high']),
+          ui_clutter_score: r2(u('uis')),
+          subject_reveal: pick(u('reveal'), ['full', 'partial', 'silhouette']),
+          subject_scale: r2(u('ss')),
+          group_size: pick(u('grp'), ['solo', 'duo', 'small_group', 'large_group']),
+          item_visibility: pick(u('item'), ['none', 'partial', 'prominent']),
+          motion_energy: r2(u('me')),
+        },
+        color_features: {
+          brightness: r2(0.35 + u('br') * 0.4),
+          saturation: r2(0.3 + u('sat') * 0.5),
+          contrast: r2(0.3 + u('con') * 0.5),
+          dominant_colors: [{ hex: '#3a5f8a', ratio: 0.4 }, { hex: '#c0743a', ratio: 0.25 }],
+        },
+        composition: {
+          subject_isolation: pick(u('iso'), ['single', 'single', 'few', 'crowded']),
+          rule_of_thirds: u('rot') > 0.4,
+          depth_layers: pick(u('depth'), ['deep', 'medium', 'flat']),
+          negative_space_available: u('neg') > 0.45,
+          text_overlay: pick(u('txt'), ['none', 'none', 'minimal', 'heavy']),
+          text_area_ratio: r2(u('tar') * 0.3),
+          weapon_or_item_present: u('wp') > 0.5,
+          camera_feel: pick(u('cam'), ['dynamic', 'static', 'cinematic']),
+        },
+        content: {
+          scene_type: pick(u('scene'), ['combat', 'combat', 'victory', 'traversal', 'cinematic', 'lobby', 'other']),
+          is_gameplay: u('gp') > 0.3,
+          real_person_present: realPerson,
+          iconic_character_present: u('icon') > 0.7,
+          game_relevance_score: r2(u('grs')),
+          ...(opts.withUserIntent ? { user_intent_match: r2(u('intent')) } : {}),
+        },
+        engagement: {
+          attention_score: r2(0.4 + u('att') * 0.5),
+          emotional_intensity: r2(u('emo')),
+          ...(opts.withContentFit ? { content_fit: pick(u('cf'), ['high', 'medium', 'low']) } : {}),
+        },
+      };
+    };
+
     // ─── 동시성 제한 병렬 실행 (Gemini 속도 최적화용) ────────────────────────
     // concurrency개씩 동시에 실행하고, 429 에러는 fetchWithGeminiRetry가 재시도 처리함
+    // 유료 등급(Tier 1, ~1000 RPM) 기준. 429가 잦으면 낮출 것 — 전역 쿨다운이 폭주는 막아줌
+    const GEMINI_CONCURRENCY = 16;
     const parallelMap = async (items, fn, concurrency = 4, onProgress = null) => {
       const results = new Array(items.length).fill(null);
       const queue = items.map((item, i) => ({ item, i }));
@@ -301,26 +377,31 @@
       return results.filter(r => r !== null);
     };
 
-    // ─── Base64 데이터URL → ImageData 변환 (Canvas 경유) ─────────────────────
-    const decodeBase64ToImageData = (base64DataUrl) =>
-      new Promise((resolve, reject) => {
-        const img = new Image();
-        img.onload = () => {
-          const canvas = document.createElement('canvas');
-          canvas.width = img.width;
-          canvas.height = img.height;
-          canvas.getContext('2d').drawImage(img, 0, 0);
-          resolve(canvas.getContext('2d').getImageData(0, 0, img.width, img.height));
-        };
-        img.onerror = reject;
-        img.src = base64DataUrl;
-      });
+    // ─── Base64 데이터URL → ImageData 변환 (createImageBitmap, 메인 스레드 밖 디코드) ──
+    // targetWidth 지정 시 디코드와 동시에 다운스케일 (픽셀 통계용 — Gemini에는 원본 전달)
+    const STATS_ANALYSIS_WIDTH = 640;
+    const decodeBase64ToImageData = async (base64DataUrl, targetWidth = null) => {
+      const blob = await (await fetch(base64DataUrl)).blob();
+      const bmp = await createImageBitmap(blob, targetWidth ? { resizeWidth: targetWidth, resizeQuality: 'low' } : {});
+      const canvas = document.createElement('canvas');
+      canvas.width = bmp.width;
+      canvas.height = bmp.height;
+      const ctx = canvas.getContext('2d', { willReadFrequently: true });
+      ctx.drawImage(bmp, 0, 0);
+      bmp.close();
+      return ctx.getImageData(0, 0, canvas.width, canvas.height);
+    };
 
     // ─── Gemini File API: 영상 업로드 ─────────────────────────────────────────
     // Electron: videoPath (문자열) → file:// 로 읽어서 Blob 생성 후 업로드
     // 웹: videoFile (File 객체) 직접 업로드
     // 503/UNAVAILABLE 등 일시적 Gemini File API 장애 시 지수 백오프로 자동 재시도
     const uploadVideoToGemini = async (videoSource, apiKey, onProgress) => {
+      if (isMockKey(apiKey)) {
+        // 업로드 진행률 애니메이션만 흉내내고 가짜 파일 핸들 반환
+        for (let p = 0; p <= 1.0001; p += 0.25) { if (onProgress) onProgress(Math.min(1, p)); await delay(120); }
+        return { name: 'files/mock-demo', uri: 'mock://demo', mimeType: 'video/mp4' };
+      }
       let file;
       if (isElectron && typeof videoSource === 'string') {
         // Electron: 로컬 파일 경로를 fetch로 읽어 Blob으로 변환
@@ -389,13 +470,16 @@
     };
 
     const waitForFileActive = async (fileName, apiKey, maxWaitMs = 120000) => {
+      if (isMockKey(apiKey)) { await delay(200); return { state: 'ACTIVE', uri: 'mock://demo', name: fileName }; }
       const deadline = Date.now() + maxWaitMs;
+      let interval = 500; // 짧은 영상은 수 초 내 ACTIVE — 빠르게 시작해서 점점 늘림
       while (Date.now() < deadline) {
         const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/${fileName}?key=${apiKey}`);
         const data = await res.json();
         if (data.state === 'ACTIVE') return data;
         if (data.state === 'FAILED') throw new Error('Gemini 파일 처리 실패');
-        await delay(2500);
+        await delay(interval);
+        interval = Math.min(3000, interval * 1.6);
       }
       throw new Error('파일 처리 시간 초과 (2분)');
     };
@@ -446,6 +530,16 @@
     // ※ 영상 스토리 스캔 기능: Gemini가 영상 전체를 보고 핵심 내용 요약(video_context)을 함께 추출,
     //    이 요약을 각 프레임 분석에 전달해 "영상 핵심 대표성(content_fit)" 평가에 사용
     const selectTimestampsFromVideo = async (fileUri, apiKey, ct, duration, userContext = '', signal = null) => {
+      if (isMockKey(apiKey)) {
+        await delay(300);
+        const dur = duration && duration > 1 ? duration : 60;
+        const N = 12;
+        const timestamps = Array.from({ length: N }, (_, i) => {
+          const ts = parseFloat((dur * (0.1 + (0.8 * (i + 0.5)) / N)).toFixed(2));
+          return { timestamp: ts, reason: `데모: ${ts}s 부근 모의 추천 구간 #${i + 1}` };
+        });
+        return { timestamps, videoContext: '데모 모드 — 모의 영상 요약입니다. (실제 분석에는 Gemini 키가 필요합니다)' };
+      }
       const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
       let promptText = getVideoSelectionPrompt(ct, duration);
       if (userContext && userContext.trim()) {
@@ -712,10 +806,18 @@
       if (typeof geminiDebugLogger === 'function') geminiDebugLogger(entry);
     };
 
+    // 429 발생 시 모든 병렬 워커가 함께 대기하도록 하는 전역 쿨다운
+    let geminiCooldownUntil = 0;
+    const awaitGeminiCooldown = async () => {
+      let wait;
+      while ((wait = geminiCooldownUntil - Date.now()) > 0) await delay(wait);
+    };
+
     const fetchWithGeminiRetry = async (url, body, maxRetries = 5, signal = null) => {
       let attempt = 0;
       while (true) {
         if (signal?.aborted) throw new DOMException('사용자가 취소함', 'AbortError');
+        await awaitGeminiCooldown();
         const startedAt = Date.now();
         let response;
         let networkError = null;
@@ -736,7 +838,8 @@
         if (response.status === 429 && attempt < maxRetries) {
           const retryAfter = parseFloat(response.headers.get('Retry-After'));
           const waitMs = !isNaN(retryAfter) ? retryAfter * 1000 : Math.min(60000, 5000 * (attempt + 1));
-          await delay(waitMs);
+          geminiCooldownUntil = Math.max(geminiCooldownUntil, Date.now() + waitMs);
+          await awaitGeminiCooldown();
           attempt++;
           continue;
         }
@@ -794,6 +897,7 @@
       };
 
       const analyzeWithGeminiRules = async (imageBase64) => {
+        if (isMockKey(geminiApiKey)) { await delay(60); return mockFeatures(String(imageBase64).slice(0, 80), { withContentFit: true }); }
         const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${geminiApiKey}`;
         const body = JSON.stringify({
           contents: [{ parts: [
@@ -823,9 +927,10 @@
         if (!parsedData || !geminiApiKey) return;
         setLoading(true); setError('');
         const analyzed = [], failed = [];
-        for (let i = 0; i < parsedData.videos.length; i++) {
-          const video = parsedData.videos[i];
-          setProgress({ current: i + 1, total: parsedData.videos.length, msg: `${video.title.substring(0, 30)}...` });
+        const total = parsedData.videos.length;
+        setProgress({ current: 0, total, msg: '병렬 분석 시작...' });
+        // 429는 fetchWithGeminiRetry의 전역 쿨다운이 모든 워커를 함께 멈춰서 처리
+        await parallelMap(parsedData.videos, async (video) => {
           try {
             const urls = [video.thumbnail_url, video.thumbnail_url.replace('maxresdefault', 'hqdefault')];
             let features = null;
@@ -841,12 +946,14 @@
             }
             if (features) analyzed.push({ video, features, thumbnail_url: video.thumbnail_url });
             else failed.push(video.title);
-            if ((i + 1) % 50 === 0) { autoBackup(analyzed, i + 1); setBackupCount((p) => p + 1); }
-            await delay(4000);
           } catch { failed.push(video.title); }
-        }
+          return true;
+        }, 8, (done) => {
+          setProgress({ current: done, total, msg: `${done}/${total} 분석 완료` });
+          if (done % 50 === 0) { autoBackup(analyzed, done); setBackupCount((p) => p + 1); }
+        });
         if (analyzed.length === 0) { setError('모든 분석 실패'); setLoading(false); return; }
-        autoBackup(analyzed, parsedData.videos.length);
+        autoBackup(analyzed, total);
         setAnalyzedData(analyzed);
         setStep(2);
         setLoading(false);
@@ -933,7 +1040,9 @@
                 <h3 className="sec-title">API 키 <span className="text-[11px] tracking-[0.15em] uppercase text-black/35 font-bold ml-1.5">API KEY</span></h3>
               </div>
               <p className="sec-hint">
-                {geminiApiKey
+                {isMockKey(geminiApiKey)
+                  ? <span className="inline-flex items-center gap-1.5"><span className="inline-block w-2 h-2 rounded-full bg-[#f9423a]" />🧪 데모(모의) 모드</span>
+                  : geminiApiKey
                   ? <span className="inline-flex items-center gap-1.5"><span className="inline-block w-2 h-2 rounded-full bg-[#f9423a]" />저장됨</span>
                   : <span className="inline-flex items-center gap-1.5"><span className="inline-block w-2 h-2 rounded-full bg-black/25" />미설정</span>
                 }
@@ -1188,6 +1297,7 @@
       const CONTEXT_INTERVAL = 0.1;
       const timelineBarRef = useRef(null);
       const timelineDragRef = useRef({ active: false, previewTs: null });
+      const contextCacheRef = useRef(new Map()); // 컨텍스트 프리뷰 구간 캐시 (최대 4구간)
       const [timelinePreviewTs, setTimelinePreviewTs] = useState(null); // 드래그 중 미리보기 위치
       const [zoomModal, setZoomModal] = useState({ open: false, imageUrl: '', title: '', zoom: 1 });
       // 인간 검토 단계: 프리필터 후보를 사용자가 직접 선별
@@ -1656,6 +1766,11 @@
 
       // ── Gemini 분석 (콘텐츠 유형별 프롬프트 동적 적용 + 자연어 컨텍스트 + 영상 요약) ───
       const analyzeWithGemini = async (base64, ct, videoContext = null) => {
+        if (isMockKey(geminiApiKey)) {
+          await delay(80);
+          // userContext가 입력됐을 때만 user_intent_match를, 영상 요약이 있을 때만 content_fit을 채워 실제 동작과 일치시킴
+          return mockFeatures(String(base64).slice(0, 80), { withUserIntent: !!(userContext && userContext.trim()), withContentFit: !!videoContext });
+        }
         const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${geminiApiKey}`;
         let prompt = getGeminiAnalysisPrompt(ct || contentType, videoContext);
         if (userContext && userContext.trim()) {
@@ -1711,7 +1826,9 @@
           timestamps.push(parseFloat(Math.min(end, Math.max(0, t)).toFixed(2)));
 
         if (isElectron) {
-          const extracted = await eAPI.extractFramesBatch(sourceVideoPath || videoPath, timestamps);
+          // 구간 연속 디코드 1회 (개별 타임스탬프 seek ~100회 대비 수 배 빠름)
+          const fps = Math.round(1 / CONTEXT_INTERVAL);
+          const extracted = await eAPI.extractSegment(sourceVideoPath || videoPath, start, end - start, fps);
           return extracted.filter((e) => e.success).map((e) => ({ timestamp: e.timestamp, dataUrl: e.base64 }));
         } else if (videoFile) {
           const video = document.createElement('video');
@@ -1761,7 +1878,18 @@
               URL.revokeObjectURL(video.src);
             }
           }
-          const preloaded = await preloadContextFrames(frame.timestamp, videoDuration, srcPath);
+          // 같은 영상의 인접 구간(±0.5초)을 다시 열면 추출 없이 캐시에서 즉시 표시
+          const cacheKey = `${srcPath}|${Math.round(frame.timestamp)}`;
+          let preloaded = contextCacheRef.current.get(cacheKey);
+          if (!preloaded || preloaded.length === 0) {
+            preloaded = await preloadContextFrames(frame.timestamp, videoDuration, srcPath);
+            contextCacheRef.current.set(cacheKey, preloaded);
+            // 1280px 프레임 ~100장/구간이라 메모리 고려해 4구간만 유지
+            if (contextCacheRef.current.size > 4) {
+              const oldest = contextCacheRef.current.keys().next().value;
+              contextCacheRef.current.delete(oldest);
+            }
+          }
           const frames = getDisplayFromCache(frame.timestamp, preloaded);
           setContextPreview((prev) => ({ ...prev, loading: false, videoDuration, preloadedFrames: preloaded, frames }));
         } catch (err) {
@@ -1929,7 +2057,7 @@
               const reasons = getReasons(features, rules);
               return { ...frame, features, score, reasons };
             },
-            8,
+            GEMINI_CONCURRENCY,
             (done, total) => setProgress({ current: 1, total: 2, msg: `추가 분석 ${done}/${total} 완료` })
           );
 
@@ -1991,8 +2119,9 @@
 
             setProgress({ current: 2, total: 6, msg: 'Gemini 영상 처리 대기 중...' });
             const activeFile = await waitForFileActive(uploadedFile.name, geminiApiKey);
-            // ACTIVE 직후 Gemini 인덱싱이 완전히 안정화될 시간을 잠시 확보 (3초)
-            await new Promise((r) => setTimeout(r, 3000));
+            // ACTIVE 직후 Gemini 인덱싱이 완전히 안정화될 시간을 잠시 확보
+            // (실패 시 selectTimestampsFromVideo의 3회 재시도가 안전망)
+            await new Promise((r) => setTimeout(r, 1000));
 
             // 영상 길이를 Gemini 호출 전에 먼저 확보 (구간별 분산 프롬프트에 사용)
             let duration;
@@ -2058,10 +2187,21 @@
               webVideoSrc = { video: webVideoSrc, canvas, ctx };
             }
 
-            const sharpFrames = [];
-            for (const rec of recommendations) {
-              const frame = await extractFineSamplesAround(rec.timestamp, duration, webVideoSrc);
-              if (frame) sharpFrames.push({ ...frame, aiReason: rec.reason });
+            let sharpFrames = [];
+            if (isElectron) {
+              // 추천 구간 전체를 배치 IPC 한 번으로 추출 (개별 호출 대비 FFmpeg 병렬 활용)
+              const tsList = recommendations.map((rec) => parseFloat(Math.min(Math.max(rec.timestamp, 0), duration - 0.1).toFixed(2)));
+              const extracted = await eAPI.extractFramesBatch(videoPath, tsList);
+              sharpFrames = extracted
+                .map((item, i) => (item?.success && item.base64)
+                  ? { timestamp: item.timestamp, dataUrl: item.base64, base64: item.base64.split(',')[1], aiReason: recommendations[i].reason }
+                  : null)
+                .filter(Boolean);
+            } else {
+              for (const rec of recommendations) {
+                const frame = await extractFineSamplesAround(rec.timestamp, duration, webVideoSrc);
+                if (frame) sharpFrames.push({ ...frame, aiReason: rec.reason });
+              }
             }
             if (!isElectron && webVideoSrc) URL.revokeObjectURL(webVideoSrc.video.src);
             if (sharpFrames.length === 0) throw new Error('선명 프레임 추출 실패');
@@ -2073,7 +2213,7 @@
             setLoading(true);
             if (selectedFrames.length === 0) throw new Error('선택된 프레임이 없습니다');
 
-            setProgress({ current: 5, total: 6, msg: `${selectedFrames.length}개 프레임 병렬 정밀 분석 중 (8개씩 동시)...` });
+            setProgress({ current: 5, total: 6, msg: `${selectedFrames.length}개 프레임 병렬 정밀 분석 중 (${GEMINI_CONCURRENCY}개씩 동시)...` });
             const analyzed = await parallelMap(
               selectedFrames,
               async (frame) => {
@@ -2084,7 +2224,7 @@
                 if (frame.aiReason) reasons.unshift(`💡 AI 선정 이유: ${frame.aiReason}`);
                 return { ...frame, features, score, reasons };
               },
-              8,
+              GEMINI_CONCURRENCY,
               (done, total) => {
                 setProgress({ current: 5, total: 6, msg: `정밀 분석 ${done}/${total} 완료` });
               }
@@ -2165,14 +2305,21 @@
           if (isElectron) {
             setProgress({ current: 1, total: 5, msg: `FFmpeg로 ${timestamps.length}컷 고속 추출 중...` });
             const extracted = await eAPI.extractFramesBatch(videoPath, timestamps);
+            // 청크 단위 병렬 디코드 (다운스케일 해상도 — 통계는 비율 기반이라 충분, 메모리도 절약)
+            // 모션 델타(prevImageData) 체인은 순서 보장을 위해 청크 내에서 순차 계산
             let prevImageData = null;
-            for (const item of extracted) {
-              if (!item.success || !item.base64) continue;
-              const imageData = await decodeBase64ToImageData(item.base64);
-              const actionDelta = computeFrameDelta(imageData, prevImageData);
-              const stats = { ...computeFrameStats(imageData), actionDelta };
-              prevImageData = imageData;
-              rawFrames.push({ timestamp: item.timestamp, dataUrl: item.base64, base64: item.base64.split(',')[1], stats, prefilterScore: (effectiveContentType === 'gameplay_cinematic' || effectiveContentType === 'teasing_3d') ? heuristicScoreGameplayCinematic(stats) : heuristicScore(stats, effectiveContentType)});
+            const DECODE_CHUNK = 12;
+            for (let c = 0; c < extracted.length; c += DECODE_CHUNK) {
+              const chunk = extracted.slice(c, c + DECODE_CHUNK).filter((it) => it.success && it.base64);
+              const decoded = await Promise.all(chunk.map((it) => decodeBase64ToImageData(it.base64, STATS_ANALYSIS_WIDTH).catch(() => null)));
+              decoded.forEach((imageData, j) => {
+                if (!imageData) return;
+                const item = chunk[j];
+                const actionDelta = computeFrameDelta(imageData, prevImageData);
+                const stats = { ...computeFrameStats(imageData), actionDelta };
+                prevImageData = imageData;
+                rawFrames.push({ timestamp: item.timestamp, dataUrl: item.base64, base64: item.base64.split(',')[1], stats, prefilterScore: (effectiveContentType === 'gameplay_cinematic' || effectiveContentType === 'teasing_3d') ? heuristicScoreGameplayCinematic(stats) : heuristicScore(stats, effectiveContentType)});
+              });
             }
           } else {
             // ─── 웹 폴백: Canvas seek ───────────────────────────────────────
@@ -2216,7 +2363,7 @@
           setLoading(true);  // 선택 완료 후 다시 로딩 시작
           if (filtered.length === 0) throw new Error('선택된 프레임이 없습니다');
 
-          setProgress({ current: 3, total: 5, msg: `Gemini ${filtered.length}컷 병렬 분석 시작 (8개씩 동시)...` });
+          setProgress({ current: 3, total: 5, msg: `Gemini ${filtered.length}컷 병렬 분석 시작 (${GEMINI_CONCURRENCY}개씩 동시)...` });
           const analyzed = await parallelMap(
             filtered,
             async (frame) => {
@@ -2225,7 +2372,7 @@
               const reasons = getReasons(features, rules);
               return { ...frame, features, score, reasons };
             },
-            8,
+            GEMINI_CONCURRENCY,
             (done, total) => {
               setProgress({ current: 3, total: 5, msg: `Gemini 분석 ${done}/${total} 완료` });
             }
@@ -3847,27 +3994,33 @@
           const dataUrl = rawUrl.startsWith('data:') ? rawUrl : `data:image/jpeg;base64,${rawUrl}`;
           const base64  = dataUrl.split(',')[1];
 
-          // 2) Gemini API 호출
-          const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${geminiApiKey}`;
-          const prompt = `이 게임 스크린샷에서 가장 중요한 피사체(캐릭터, 플레이어, 핵심 액션 포인트)를 찾아 위치를 반환하세요.
+          // 2~3) 피사체 위치 — 데모 모드면 합성값, 아니면 Gemini 호출 후 파싱
+          let subjectX, subjectY;
+          if (isMockKey(geminiApiKey)) {
+            await delay(150);
+            subjectX = Math.max(0, Math.min(1, 0.4 + seededUnit(base64.slice(0, 80) + '|sx') * 0.2));
+            subjectY = Math.max(0, Math.min(1, 0.35 + seededUnit(base64.slice(0, 80) + '|sy') * 0.2));
+          } else {
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${geminiApiKey}`;
+            const prompt = `이 게임 스크린샷에서 가장 중요한 피사체(캐릭터, 플레이어, 핵심 액션 포인트)를 찾아 위치를 반환하세요.
 0.0 = 왼쪽/상단 끝, 1.0 = 오른쪽/하단 끝.
 반드시 JSON만 응답하세요: {"subject_x": 0.45, "subject_y": 0.40}`;
-          const body = JSON.stringify({
-            contents: [{ parts: [
-              { inline_data: { mime_type: 'image/jpeg', data: base64 } },
-              { text: prompt }
-            ]}],
-          });
-          const response = await fetchWithGeminiRetry(apiUrl, body);
-          const data     = await response.json();
-          const text     = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
+            const body = JSON.stringify({
+              contents: [{ parts: [
+                { inline_data: { mime_type: 'image/jpeg', data: base64 } },
+                { text: prompt }
+              ]}],
+            });
+            const response = await fetchWithGeminiRetry(apiUrl, body);
+            const data     = await response.json();
+            const text     = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
 
-          // 3) JSON 파싱
-          const jsonMatch = text.match(/\{[\s\S]*?\}/);
-          if (!jsonMatch) throw new Error('Gemini 응답에서 JSON을 찾을 수 없습니다');
-          const parsed   = JSON.parse(jsonMatch[0]);
-          const subjectX = Math.max(0, Math.min(1, parsed.subject_x ?? 0.5));
-          const subjectY = Math.max(0, Math.min(1, parsed.subject_y ?? 0.5));
+            const jsonMatch = text.match(/\{[\s\S]*?\}/);
+            if (!jsonMatch) throw new Error('Gemini 응답에서 JSON을 찾을 수 없습니다');
+            const parsed   = JSON.parse(jsonMatch[0]);
+            subjectX = Math.max(0, Math.min(1, parsed.subject_x ?? 0.5));
+            subjectY = Math.max(0, Math.min(1, parsed.subject_y ?? 0.5));
+          }
 
           // 4) 이미지 실제 크기 로드
           const img = await loadImgDirect(dataUrl);
@@ -4676,6 +4829,15 @@
                     API 키 발급받기 ↗
                   </a>
                 </div>
+
+                {/* 데모(모의) 모드 — API 키 없이 둘러보기 */}
+                <button
+                  type="button"
+                  onClick={async () => { await storage.set('geminiApiKey', MOCK_KEY); onSaved(MOCK_KEY); }}
+                  className="text-[11px] tracking-[0.2em] font-semibold uppercase text-white/40 hover:text-white/80 underline underline-offset-4 transition-colors"
+                >
+                  🧪 API 키 없이 데모 모드로 둘러보기
+                </button>
               </div>
             </div>
           </div>
@@ -4732,6 +4894,13 @@
       // 3) 정상 메인 페이지 — KRAFTON Brand Guidelines V1.1 준수
       return (
         <div className="min-h-screen bg-white font-brand text-black">
+          {/* 데모(모의) 모드 배너 — 합성 결과를 실제 분석으로 오인하지 않도록 상시 표시 */}
+          {isMockKey(geminiApiKey) && (
+            <div className="sticky top-0 z-40 w-full text-center text-[12px] font-bold tracking-wide py-1.5 px-4"
+                 style={{ backgroundColor: '#f9423a', color: '#fff' }}>
+              🧪 데모(모의) 모드 — AI 결과는 가짜 데이터입니다. 실제 분석은 Gemini API 키가 필요합니다.
+            </div>
+          )}
           {/* Top Bar: 검정 배경 / 흰색 텍스트 / 오렌지 액센트 — sticky 고정 */}
           <div className="sticky top-0 z-30 bg-black text-white shadow-lg">
             {/* Electron 타이틀바 드래그 공간 */}

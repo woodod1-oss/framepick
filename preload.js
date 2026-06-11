@@ -22,6 +22,7 @@ contextBridge.exposeInMainWorld('electronAPI', {
   detectCuts: (videoPath) => ipcRenderer.invoke('ffmpeg-detect-cuts', videoPath),
   extractFrame: (videoPath, timestamp) => ipcRenderer.invoke('ffmpeg-extract-frame', videoPath, timestamp),
   extractFramesBatch: (videoPath, timestamps) => ipcRenderer.invoke('ffmpeg-extract-frames-batch', videoPath, timestamps),
+  extractSegment: (videoPath, start, durationS, fps) => ipcRenderer.invoke('ffmpeg-extract-segment', videoPath, start, durationS, fps),
   compressVideoForUpload: (videoPath) => ipcRenderer.invoke('ffmpeg-compress-video', videoPath),
   deleteTempFile: (filePath) => ipcRenderer.invoke('ffmpeg-delete-temp', filePath),
 

@@ -1,6 +1,7 @@
 const { app, BrowserWindow, ipcMain, dialog, shell } = require('electron');
 const path = require('path');
 const fs = require('fs');
+const os = require('os');
 const Store = require('electron-store');
 const ffmpeg = require('fluent-ffmpeg');
 const ffmpegStatic = require('ffmpeg-static');
@@ -245,7 +246,8 @@ ipcMain.handle('get-app-dir', () => __dirname);
 
 // 여러 타임스탬프에서 프레임 배치 추출 (진행률 콜백 포함)
 ipcMain.handle('ffmpeg-extract-frames-batch', async (event, videoPath, timestamps) => {
-  const CONCURRENCY = 6; // 동시 FFmpeg 프로세스 수
+  // 코어 수 기반 동시 FFmpeg 프로세스 수 (메모리/IO 과부하 방지 위해 12 상한)
+  const CONCURRENCY = Math.max(4, Math.min(12, os.cpus().length - 2));
   const results = new Array(timestamps.length);
   let completed = 0;
 
@@ -280,11 +282,47 @@ ipcMain.handle('ffmpeg-extract-frames-batch', async (event, videoPath, timestamp
       .run();
   });
 
-  // CONCURRENCY 개씩 병렬 처리
-  for (let i = 0; i < timestamps.length; i += CONCURRENCY) {
-    const batch = timestamps.slice(i, i + CONCURRENCY).map((_, j) => extractOne(i + j));
-    await Promise.all(batch);
-  }
+  // 워커 풀 방식: 느린 프레임 하나가 다음 묶음 전체를 막지 않음
+  let nextIndex = 0;
+  const worker = async () => {
+    while (nextIndex < timestamps.length) {
+      const i = nextIndex++;
+      await extractOne(i);
+    }
+  };
+  await Promise.all(Array.from({ length: Math.min(CONCURRENCY, timestamps.length) }, worker));
 
   return results;
+});
+
+// 구간 연속 추출: ffmpeg 프로세스 1개가 start부터 durationS초를 fps 간격으로 디코드
+// (컨텍스트 프리뷰용 — 타임스탬프 100개를 개별 seek로 추출하는 것보다 훨씬 빠름)
+// 프리뷰 프레임이 편집/저장에 그대로 쓰이므로 배치 추출과 동일한 1280px / q:v 2 유지
+ipcMain.handle('ffmpeg-extract-segment', async (event, videoPath, start, durationS, fps = 10) => {
+  const dir = fs.mkdtempSync(path.join(app.getPath('temp'), 'twb_seg_'));
+  const pattern = path.join(dir, 'f_%04d.jpg');
+  const safeStart = Math.max(0, start);
+  try {
+    await new Promise((resolve, reject) => {
+      ffmpeg(videoPath)
+        .seekInput(safeStart)
+        .duration(durationS)
+        .outputOptions(['-vf', `fps=${fps},scale=1280:-2`, '-q:v', '2'])
+        .output(pattern)
+        .on('end', resolve)
+        .on('error', reject)
+        .run();
+    });
+    const files = fs.readdirSync(dir).filter((f) => f.endsWith('.jpg')).sort();
+    return files.map((f, i) => ({
+      timestamp: parseFloat((safeStart + i / fps).toFixed(2)),
+      base64: `data:image/jpeg;base64,${fs.readFileSync(path.join(dir, f)).toString('base64')}`,
+      success: true,
+    }));
+  } finally {
+    try {
+      fs.readdirSync(dir).forEach((f) => safeCleanup(path.join(dir, f)));
+      fs.rmdirSync(dir);
+    } catch {}
+  }
 });
